@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> All Products-Redstore </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href=" https://fonts.google.com/share?selection.family=Poppins:wght@300;400;500;600;700">
+    
+    <link rel="stylesheet" href="style.css">
+  
+   
+</head>
+<div class="container">
+    <div class="navbar">
+        <div class="logo">
+           <a href="index.html"> <img src="image/logo.png" width="125px"></a>
+            
+        </div>
+       <nav>
+           <ul id="menuitems">
+               <li><a href="index.html">Home</a></li>
+               <li><a href="product.html">Products</a></li>
+               <li><a href="">About</a></li>
+               <li><a href="contact.html">Contact</a></li>
+               <li><a href="account.html">Account</a></li>
+           </ul>
+       </nav>
+       <a href="card.html"><img src="image/cart.png" width="30px"></a>
+       <img src="image/menu.png" class="menu-icon" class="menu-icon"
+       onclick="menutoggle()">
+    </div>
+   
+</div>
+
+<!------Account page----->
+<div class="account-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <img src="image/image1.png" width="100%">
+            </div>
+            <div class="col-2">
+               <div class="form-container">
+                     <div class="form-btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="register()">Register</span>
+                        <hr id="Indicator">
+                     </div>
+                   <form id="Loginform">
+                       <input type="text" placeholder="username">
+                       <input type="password" placeholder="password">
+                        <button type="submit" class="btn">Login</button> 
+                        <a href="">forgot password</a>
+                       
+                   </form>
+                   <form id="Regform">
+                    <input type="text" placeholder="username">
+                    <input type="email" placeholder="email">
+                    <input type="password" placeholder="password">
+                     <button type="submit" class="btn">Register</button> 
+                     
+                    
+                  </form>
+               
+              </div>
+        </div>
+    </div>
+</div>
+
+<!-----footer------>
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download our App</h3>
+                <p>Download App for android and mobile phone</p>
+                <div class="app-logo">
+                    <img src="image/play-store.png">
+                    <img src="image/app-store.png">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="image/logo-white.png">
+                <p>Our purpose is to sustainably make the pleasure and benefits to the many. </p>
+            </div>
+            <div class="footer-col-3">
+               <h3>Useful links</h3>
+                <ul>
+                   <li>Coupons</li>
+                   <li>Blog Post</li>
+                   <li>Return policy</li>
+                   <li>Join affiliate</li>
+                </ul>
+             </div>
+             <div class="footer-col-4">
+                <h3>follow Us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Istagram</li>
+                    <li>Youtube</li>
+                </ul>
+             </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright github:mrong7</p>
+    </div>
+        
+</div>
+
+<!--------------------js for toggle menu------->
+
+<script>
+    var menuitems = document.getElementById("menuitems");
+    menuitems.style.maxHeight = "0px";
+    function menutoggle(){
+        if( menuitems.style.maxHeight == "0px")
+        {
+            menuitems.style.maxHeight = "200px";
+        }
+      else
+      {
+        menuitems.style.maxHeight = "0px";
+      }
+      
+    }
+ 
+</script>
+
+<!--------------------js for toggle form------->
+
+<script>
+    var Loginform = document.getElementById("Loginform");
+    var Regform = document.getElementById("Regform");
+    var Indicator =document.getElementById("Indicator");
+    function register(){
+        Regform.style.transform = "translateX(0px)";
+        Loginform.style.transform = "translate(0px)";
+        Indicator.style.transform = "translateX(100px)";
+    }
+    function login(){
+        Regform.style.transform = "translateX(300px)";
+        Loginform.style.transform = "translateX(300px)";
+        Indicator.style.transform = "translateX(0px)";
+    }
+
+</script>
+
+
+</body>
+</html>
